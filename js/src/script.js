@@ -91,6 +91,19 @@ class App {
     this.reset();
   }
 
+  removeNote(note){
+    // remove the note from noteContainer
+    this.wrapperNotes.removeChild(note.element);
+
+    // remove from our array
+    this.notesArray = _.reject(this.notesArray, function(element) {
+      return element === note;
+    });
+
+    // remove from localstorage
+    localStorage.setItem('notes', JSON.stringify(this.notesArray));
+  }
+
   reset(){
     // this function should reset the form
   }
