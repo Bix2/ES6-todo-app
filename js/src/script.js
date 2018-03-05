@@ -67,7 +67,6 @@ class App {
     }
   }
 
-
   loadNotesFromStorage() {
     // HINT🤩
     // load all notes from storage here and add them to the screen
