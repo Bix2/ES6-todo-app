@@ -1,13 +1,28 @@
 class Note {
   constructor(title) {
     this.title = title;
-    // HINT🤩 this.element = this.createElement(title);
+    this.element = this.createElement();
   }
 
-  createElement(title){
+  createElement(){
+    // create main element and add classList
     let newNote = document.createElement('div');
+    newNote.classList.add('card');
 
-    // HINT🤩 a.addEventListener('click', this.remove.bind(newNote));
+    // add text input
+    let textWrapper = document.createElement('p');
+    let textContent = document.createTextNode(this.title);
+    textWrapper.appendChild(textContent);
+    newNote.appendChild(textWrapper);
+
+    // add removelink
+    let linkWrapper = document.createElement('a');
+    let linkContent = document.createTextNode('remove');
+    linkWrapper.appendChild(linkContent);
+    newNote.appendChild(linkWrapper);
+
+    // bind event to removelink
+    linkWrapper.addEventListener('click', this.remove.bind(this));
 
     return newNote;
   }
