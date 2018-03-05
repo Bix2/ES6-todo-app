@@ -105,7 +105,9 @@ class App {
   }
 
   reset(){
-    // this function should reset the form
+    // reset the form
+    this.txtAdd.value = "";
+    this.txtAdd.focus();
   }
 
 }
