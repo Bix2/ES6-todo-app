@@ -60,7 +60,13 @@ class App {
     this.loadNotesFromStorage();
   }
 
-  
+  keyPress(e) {
+    if(e.keyCode == 13){
+      this.createNote();
+      e.preventDefault();
+    }
+  }
+
 
   loadNotesFromStorage() {
     // HINT🤩
