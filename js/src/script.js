@@ -68,9 +68,18 @@ class App {
   }
 
   loadNotesFromStorage() {
-    // HINT🤩
-    // load all notes from storage here and add them to the screen
-    // something like note.add() in a loop would be nice
+    // need to us temp array because we need to replace the saved notes with the new notes.
+    let temp = [];
+    this.notesArray = localStorage.getItem('notes') ? JSON.parse(localStorage.getItem('notes')) : [];
+
+    // we remake the notes because when we save the notes to localstorage we lose object ref + html dom obj
+    this.notesArray.forEach(item => {
+      let note = new Note(item.title);
+      note.add();
+      temp.push(note);
+    });
+    this.notesArray = temp;
+    localStorage.setItem('notes', JSON.stringify(this.notesArray));
   }
 
   createNote(e){
