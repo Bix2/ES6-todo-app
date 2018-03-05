@@ -62,7 +62,7 @@ class App {
 
   keyPress(e) {
     if(e.keyCode == 13){
-      this.createNote();
+      this.createNote(e);
       e.preventDefault();
     }
   }
