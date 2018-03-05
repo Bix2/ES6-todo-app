@@ -48,13 +48,19 @@ class App {
   constructor() {
     console.log("👊🏼 The Constructor!");
 
-    // HINT🤩
-    // clicking the button should work
-    // pressing the enter key should also work
-    // this.btnAdd = ???
-    // this.btnAdd.addEventListener("click", this.createNote.bind(this));
-    // this.loadNotesFromStorage();
+    // save properties
+    this.btnAdd = document.getElementById("btnAddNote");
+    this.txtAdd = document.getElementById("txtAddNote");
+    this.wrapperNotes = document.querySelector(".notes");
+
+    // set listeners - button and enter key
+    this.btnAdd.addEventListener("click", this.createNote.bind(this));
+    this.txtAdd.addEventListener('keypress', this.keyPress.bind(this));
+
+    this.loadNotesFromStorage();
   }
+
+  
 
   loadNotesFromStorage() {
     // HINT🤩
