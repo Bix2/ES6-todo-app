@@ -84,11 +84,11 @@ class App {
 
   createNote(e){
     // this function should create a new note by using the Note() class
-
-    // HINT🤩
-    // note.add();
-    // note.saveToStorage();
-    // this.reset();
+    e.preventDefault();
+    let note = new Note(this.txtAdd.value);
+    note.add();
+    note.saveToStorage();
+    this.reset();
   }
 
   reset(){
