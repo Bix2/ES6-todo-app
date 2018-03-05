@@ -5,24 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+<<<<<<< HEAD
     <link re="stylesheet" href="https://rawgit.com/iamgoodbytes/ES6-workshop/notes-start/css/surface_styles.css" />
+=======
+    <link rel="stylesheet" href="https://rawgit.com/iamgoodbytes/ES6-workshop/notes-start/css/surface_styles.css" />
+    <style media="screen">
+      .card{margin: 1em; flex: 0 1 20%;}
+      .notes{align-items: center;}
+      .card-remove{display:inline-block;}
+      input[type=text]{padding-top:50px;}
+    </style>
+>>>>>>> test
   </head>
   <body>
 
-<div class="g--10 m--1">
-  <form action="">
-    <input type="text" id="txtAddNote" placeholder="Add a note">
-    <button type="button" id="btnAddNote" class="btn--float btn--primary">+</button>
-  </form>
-</div>
+    <div class="g--10 m--1">
+      <form action="">
+        <input type="text" id="txtAddNote" placeholder="Add a note">
+        <button type="button" id="btnAddNote" class="btn--float btn--primary">+</button>
+      </form>
+    </div>
 
-<div class="notes g--10 m--1 container--wrap">
-  <div class="card">
-    <p>This is a sample card.</p>
-    <a href="#" class="card-remove">Remove</a>
-  </div>
-</div>
+    <div class="notes g--10 m--1 container--wrap">
+      <!--<div class="card">
+        <p>This is a sample card.</p>
+        <a href="#" class="card-remove">Remove</a>
+      </div>-->
+    </div>
 
-<script src="js/src/index.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="js/src/script.js"></script>
+  </body>
 </html>
