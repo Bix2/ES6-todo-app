@@ -28,8 +28,8 @@ class Note {
   }
 
   add(){
-    // HINT🤩
-    // this function should append the note to the screen somehow
+    // append the note to the screen
+    document.querySelector(".notes").appendChild(this.element);
   }
 
   saveToStorage(){
